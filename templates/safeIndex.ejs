@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment Section</title>
+  </head>
+  <body>
+    <section>
+      <h1>Comment section</h1>
+      <hr/>
+
+      <% if (isValidSession) { %>
+      <div>
+        <a href="/safeUser"><h2>Your profile</h2></a>
+      </div>
+      <% } %>
+    </section>
+
+    <section>
+      <form method="post" action="comments">
+        <fieldset>
+          <textarea
+            name="newComment"
+            cols="80"
+            rows="5"
+            placeholder="Submit your comment"
+          ></textarea>
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+          <% if (!isValidSession) { %>
+          <div>
+            You need a <a href="session/new">valid session</a> to submit a
+            comment.
+          </div>
+          <% } %>
+        </fieldset>
+        <fieldset>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+      <hr />
+      <h2>Comments</h2>
+      <dl>
+        <dt><b>Author ==> Comment</b></dt>
+        <% comments.forEach(comment => {%>
+        <dt><%= username %> ==> <%= comment %></dt>
+        <% }); %>
+      </dl>
+    </section>
+  </body>
+</html>
