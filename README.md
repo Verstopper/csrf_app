@@ -1,6 +1,7 @@
 # csrf_app
 
-This is a simple app that allows authenticated user to create comment and update his username and email address.
+This is a simple app that allows an authenticated user to create comment and update his username and email address.
+After clicking valid_session link on the page user John is logged in and authenticated. After pressing Your page link, John can change his username and/or password. After pressing Save click on link Home to get back to comments section and you can notice that the author of comments is updated accordingly to the user's name. 
 
 ### Starting the app
 To run this app in one of two modes (vulnerable and safe mode), do the following:
