@@ -33,7 +33,7 @@ npm install
 ### Testing attack on safe mode and vulnerable mode
 
 To test CSRF attack in either of two modes, launch the app in desired mode and open the app in one tab
-and the atttack-server in other tab (preferably in different browsers)
+and the atttack-server in other tab
 
 
 [App](http://localhost:3000/) ==> http://localhost:3000/
